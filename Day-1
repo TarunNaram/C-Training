@@ -1,0 +1,12 @@
+program for displaying alphebets and their ascii values
+#include<stdio.h>
+int main()
+{
+    for(int i=122; i>98; i--)
+    {
+        printf("%c = %d ",i,i);
+    }
+    
+    return 0;
+}
+***************************************************************************
