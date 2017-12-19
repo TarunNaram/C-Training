@@ -190,6 +190,22 @@ Test Data :
 Expected Output :
 This is a special character.
 
+#include<stdio.h>
+int main()
+{
+   char ch;
+   printf("Enter a character \n");
+   scanf("%c",&ch);
+   if ( (ch >= 'a' && ch<='z')  || (ch>='A' && ch<='Z'))
+       printf("It is an ALPHABET");
+    else if (ch>='0' && ch<='9')
+       printf("It is an NUMBER"); 
+    else
+       printf("It is a special character");  
+      
+    return 0;
+}
+
 **********************************************************************************************************************
 Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : Go to the editor
 
