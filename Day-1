@@ -131,18 +131,65 @@ Write a C program to check whether a given number is positive or negative.
 Test Data : 15 
 Expected Output :
 15 is a positive number
+
+#include<stdio.h>
+int main()
+{
+    int num1=0;
+    printf("Enter a number \n");
+    scanf("%d",&num1);
+    if(num1 > 0)
+      printf("%d is a positive number",num1);
+    else if (num1 < 0)
+      printf("%d is negative",num1);
+    else
+      printf("It is zero - neither positive nor negative");  
+       return 0;
+}
 **************************************************************************************************************
 Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene. 
 Test Data : 
 50 50 60 
 Expected Output :
 This is an isosceles triangle.
+
+#include<stdio.h>
+int main()
+{
+    int a=50,b=50,c=60;
+    if (a==b)
+    {
+        if(b==c)
+        printf("The Triangle is Equilateral");
+        else
+        printf("The Triangle is Isosceles");
+    }
+    else if (b==c)
+    {
+        if(b==a)
+        printf("The Triangle is Equilateral");
+        else
+        printf("The Triangle is Isosceles");
+    }
+    else if (a==c)
+    {
+        if(b==c)
+        printf("The Triangle is Equilateral");
+        else
+        printf("The Triangle is Isosceles");
+    }
+    else
+        printf("The triangle is Scalene");
+      
+    return 0;
+}
 *******************************************************************************************************************
 Write a C program to check whether a character is an alphabet, digit or special character. 
 Test Data : 
 @
 Expected Output :
 This is a special character.
+
 **********************************************************************************************************************
 Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : Go to the editor
 
