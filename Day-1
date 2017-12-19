@@ -230,4 +230,70 @@ Amount Charges @Rs. 2.00 per unit : 1600.00
 Surchage Amount : 240.00 
 Net Amount Paid By the Customer : 1840.00
 
+#include<stdio.h>
+int main()
+{
+  int id=0;
+  char name[20];
+  double units = 0;
+  double amount=0;
+  double charges=0;
+  double surcharge = 0;
+  double netamount = 0;
+   printf("Enter Customer-id \n");
+   scanf("%d",&id);
+   //
+   printf("Enter Units consumed");
+   scanf("%f",&units);
+   //
+   printf("Enter Name \n");
+   for(int i=0; i<20; i++)
+   {
+       scanf("%c",&name[i]);
+   }
+   printf("Data REad");
+   
+   if (units <= 199)
+        amount = units*1.20;
+        charges=1.20;
+        netamount = amount;
+    else if ( units>=200 && units<400 )
+        amount = units*1.50;
+        charges = 1.50;
+        if (amount > 400)
+          surcharge = 0.15 * amount;
+          netamount = amount * 1.15;
+        else
+          netamount = amount;
+    else if ( units>=400 && units<600 )
+        amount = units*1.80; 
+        charges=1.80;
+        if (amount > 400)
+          surcharge = 0.15 * amount;
+          netamount = amount * 1.15;
+        else
+          netamount = amount;  
+          amount = units * 2.00;
+        charges=2.00;
+        if (amount > 400)
+          surcharge = 0.15 * amount;
+          netamount = amount * 1.15;
+        else
+          netamount = amount;  
+//        
+    printf("Customer IDNO:%d",id);
+    printf("Customer Name:");
+    for(int j=0;j<20;j++)
+    {
+        printf("%c",name[j]);
+    }
+    printf("\n");
+    printf("Units Consumed :",units);
+    printf("Amount Charges @Rs. %f per unit : %f", charges,amount);
+    printf("Surcharge Amount : %f",surcharge);
+    printf("Net amount Paid by the Customer : %f",netamount);
+        
+    return 0;
+}
+
 **************************************************************************************************************************
