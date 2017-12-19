@@ -36,7 +36,7 @@ int main()
         
     }
     printf("Sum of entered numbers is %d \n",sum);
-    printf("Average of entered numbers is %.2f", (float)(sum/i));
+    printf("Average of entered numbers is %.2f", (float)(sum/i-1));
     return 0;
 }
 
