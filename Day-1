@@ -82,8 +82,12 @@ int main()
     }
     return 0;
 }
- 
- 
+************************************************************************************************** 
+6.Write a C program to convert a string to a long integer. 
+
+Expected Output :
+
+In decimals: 2016, 4235440, -3624422, 5947391.
  
 ****************************************************************************************
 Program for displaying alphebets and their ascii values
