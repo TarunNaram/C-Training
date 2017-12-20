@@ -84,14 +84,8 @@ int main()
     return 0;
 }
 ************************************************************************************************** 
-6.Write a C program to convert a string to a long integer. 
 
-Expected Output :
-
-In decimals: 2016, 4235440, -3624422, 5947391.
- 
-****************************************************************************************
-Program for displaying alphebets and their ascii values
+6. Program for displaying alphebets and their ascii values
 #include<stdio.h>
 int main()
 {
@@ -243,57 +237,80 @@ int main()
    printf("Enter Customer-id \n");
    scanf("%d",&id);
    //
-   printf("Enter Units consumed");
+   printf("Enter Units consumed \n");
    scanf("%f",&units);
+   printf("\nunits:%d",units);
    //
    printf("Enter Name \n");
    for(int i=0; i<20; i++)
    {
        scanf("%c",&name[i]);
    }
-   printf("Data REad");
+   printf("Data Read \n");
    
-   if (units <= 199)
+   //
+    if (units <= 199)
+      {
+        printf("units <= 199");
         amount = units*1.20;
         charges=1.20;
         netamount = amount;
-    else if ( units>=200 && units<400 )
+      }
+    //  if ( units>=200 && units<400 )
+      {
+        printf("units < 400");
         amount = units*1.50;
         charges = 1.50;
         if (amount > 400)
+        {
           surcharge = 0.15 * amount;
           netamount = amount * 1.15;
+        }
         else
           netamount = amount;
-    else if ( units>=400 && units<600 )
+      }
+    //  
+    if ( units>=400 && units<600 )
+    {
+        printf("units < 600");
         amount = units*1.80; 
         charges=1.80;
         if (amount > 400)
+        {
           surcharge = 0.15 * amount;
           netamount = amount * 1.15;
+        }  
         else
-          netamount = amount;  
-          amount = units * 2.00;
+          netamount = amount; 
+    }      
+    //      
+    if (units >= 600)
+    {
+        printf("units >= 600");
+        amount = units * 2.00;
         charges=2.00;
         if (amount > 400)
+         {
           surcharge = 0.15 * amount;
           netamount = amount * 1.15;
+         }
         else
-          netamount = amount;  
+          netamount = amount; 
+    }      
 //        
-    printf("Customer IDNO:%d",id);
-    printf("Customer Name:");
+    printf("\n Customer IDNO:%d",id);
+    printf("\n Customer Name:");
     for(int j=0;j<20;j++)
     {
         printf("%c",name[j]);
-    }
-    printf("\n");
-    printf("Units Consumed :",units);
-    printf("Amount Charges @Rs. %f per unit : %f", charges,amount);
-    printf("Surcharge Amount : %f",surcharge);
-    printf("Net amount Paid by the Customer : %f",netamount);
+    }printf("\n");
+    printf("\n Units Consumed :%d",units);
+    printf("\n Amount Charges @ Rs.%f per unit : %f", charges,amount);
+    printf("\n Surcharge Amount : %f",surcharge);
+    printf("\n Net amount Paid by the Customer : %f",netamount);
         
     return 0;
 }
+
 
 **************************************************************************************************************************
