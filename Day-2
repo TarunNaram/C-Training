@@ -136,4 +136,29 @@ int main()
     }
 }
 *********************************************************************************************
+PROGRAM TO SORT
+#include<stdio.h>
+int main() 
+{
+   int a[5] = {122,66,44,97,23};
+   int temp;
+   //sorting in ascending order
+   
+   for(int i=0; i<5;i++)
+   {
+       for(int j=i+1 ; j<5; j++)
+       {
+        if( a[i] > a[j])
+         {
+            //swap
+            a[i] = a[i]+a[j] - (a[j] = a[i]);
+         }
+       } 
+   }
+   for(int m=0; m<5; m++)
+   {
+       printf("%d \t",a[m]);
+   }
+   return 0;
+}
 
