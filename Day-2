@@ -36,3 +36,104 @@ int main()
 }
 *****************************************************************************************************
 ADDITION OF 2 3D MATRICES
+#include<stdio.h>
+
+//ADDITION OF 2 3D MATRICES
+int main()
+{
+    int a[3][3][3]=
+    {  
+      { 
+       {1,0,1}, 
+       {1,1,1},
+       {0,0,0}
+      },
+      { 
+       {0,0,1}, 
+       {1,0,1},
+       {0,1,1}
+      },
+      { 
+       {1,0,1}, 
+       {1,1,1},
+       {0,0,0}
+      }
+      
+    };
+    int b[3][3][3]=
+    {
+       { 
+         {1,0,1}, 
+         {1,1,1},
+         {0,0,0}
+        },
+        { 
+          {1,0,1}, 
+          {1,1,1},
+          {0,0,0}
+        },
+        { 
+          {0,0,1}, 
+          {1,0,1},
+          {0,1,1}
+      }
+        
+    };
+    int c[3][3][3];
+    //ADDING THE TWO MATRICES
+    for(int i=0 ; i<3 ; i++ )
+    {
+        for(int j=0 ; j<3 ; j++)
+        {
+            for(int k=0; k<3 ; k++)
+            {
+                c[i][j][k] = a[i][j][k] + b[i][j][k];
+            }
+            
+        }
+    }
+    //
+    printf("First matrix is:\n");
+    for(int i=0 ; i<3 ; i++ )
+    {
+        for(int j=0 ; j<3 ; j++)
+        {
+            for(int k=0; k<3; k++)
+            {
+                printf("%d \t",a[i][j][k]);
+            }    
+         printf("\n"); 
+        }
+        printf("\n");
+    }
+    //
+    printf("Second Matrix is:\n");
+    for(int i=0 ; i<3 ; i++ )
+    {
+        for(int j=0 ; j<3 ; j++)
+        {
+            for(int k=0; k<3; k++)
+            {
+                printf("%d \t",b[i][j][k]);
+            }    
+         printf("\n"); 
+        }
+        printf("\n");
+    }
+    //
+    printf("Addtion : Result matrix is: \n");
+    for(int i=0 ; i<3 ; i++ )
+    {
+        for(int j=0 ; j<3 ; j++)
+        {
+            for(int k=0; k<3; k++)
+            {
+                printf("%d \t",c[i][j][k]);
+            }    
+         printf("\n"); 
+        }
+        printf("\n");
+    }
+}
+*********************************************************************************************
+
