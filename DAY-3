@@ -23,3 +23,20 @@ void bbc()
     printf("\n BBC EXECUTED");
     //return;
 }
+*******************************************************************************
+CALL BY VALUE
+#include<stdio.h>
+void sum(int num1,int num2);
+int main()
+{
+   int a=2;
+   int b = 3;
+   sum(a,b);
+   return 0;
+}
+void sum(int num1,int num2)
+{
+    printf("%d",num1+num2);
+}
+******************************************************************************************
+CALL BY REFERENCE
