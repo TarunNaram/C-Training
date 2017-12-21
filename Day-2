@@ -166,7 +166,7 @@ int main()
 #include<stdio.h>
 int main() 
 {
-   int a[5] = {122,66,44,97,44};
+int a[5] = {122,66,'a',97,'z'};
    int temp;
    //sorting in ascending order
    
@@ -183,21 +183,21 @@ int main()
    }
    printf("The duplicates is/are:\n");
    int count = 0;
-   for(int i=0; i<5;i++)
+   for(int i=0; i <5 ; i++)
    {
-       for(int j=i+1 ; j<5; j++)
+       for(int j=i+1 ; j <5 ; j++)
        {
         if( a[i] == a[j])
          {
             count++;
-            printf("%d \t",a[i]);
+            printf("%c \t",a[i]);
          }
        } 
    }
    printf("\n The sorted array is:\n");
    for(int m=0; m<5; m++)
    {
-       printf("%d \t",a[m]);
+       printf("%c \t",a[m]);
    }
    return 0;
 }
