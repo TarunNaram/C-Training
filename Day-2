@@ -201,4 +201,17 @@ int a[5] = {122,66,'a',97,'z'};
    }
    return 0;
 }
+***************************************************************
+Program to convert UPPER-CASE to LOWER-CASE
 
+#include<stdio.h>
+int main() 
+{
+    char alphabet;
+    printf("Enter an alphabet in upper case \n");
+    scanf("%c",&alphabet);
+    alphabet += 32 ;
+    printf("Lower case: %c", alphabet);
+    return 0;
+}
+***************************************************************************
