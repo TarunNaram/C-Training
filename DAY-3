@@ -1,0 +1,25 @@
+MAIN >> ABC >> BBC
+
+#include<stdio.h>
+void abc();
+void bbc();
+
+int main() 
+{
+  
+   printf("\n MAIN EXECTUED");
+   abc();
+   return 0;
+}
+
+void abc()
+{
+    printf("\n ABC EXECTUED");
+    bbc();   
+}
+
+void bbc()
+{
+    printf("\n BBC EXECUTED");
+    //return;
+}
