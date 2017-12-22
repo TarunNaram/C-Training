@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+enum state {working = 0, failed, freezed} ;
+enum state currstate = freezed;
+enum state findstate()
+{
+  return currstate;
+}
+int main()
+{
+     clrscr();
+    ( findstate() == working) ? printf("working") : printf("Not working");
+    getch();
+ return 0;
+}
+************************************************************************************
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int *p;
+	int **p2;
+	int num = 50;
+	p = &num;
+	p2 =&p;
+	printf("\n num=%d",num);
+	printf("\n &num=%u",&num);
+	printf("\n p=%u",p);
+	printf("\n *p=%d",*p);
+	printf("\n &p=%u",&p);
+	printf("\n p2=%u",p2);
+	printf("\n *p2=%u",*p2);
+	printf("\n **p2=%u",**p2);
+	printf("\n &p=%u",&p2);
+	getch();
+ return 0;
+}
+*************************************************************************************************
