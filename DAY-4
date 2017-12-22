@@ -36,3 +36,142 @@ int main()
  return 0;
 }
 *************************************************************************************************
+//factorial of a number using recurssion
+#include<stdio.h>
+#include<conio.h>
+int factorial(int num);
+int main()
+{
+	int number = 5;
+	clrscr();
+	printf("5! = %d",factorial(number));
+	getch();
+	return 0;
+}
+//
+int factorial(int num)
+{
+	if( num == 0 )
+	  return 1;
+	if( num > 0 )
+	  return  num * factorial(num - 1);
+
+}
+*******************************************************************************************
+//Program using STRUCTURES
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+struct books
+{
+	char title[20];
+	char author[20];
+	int year;
+};
+int main()
+{
+	struct books book1;
+	clrscr();
+	strcpy(book1.title,"The Origin");
+	strcpy(book1.author,"Dan Brown");
+	book1.year = 2017;
+	printf("Title:%s, Author:%s, Year:%d",book1.title,book1.author,
+				book1.year);
+	getch();
+	return 0;
+}
+******************************************************************************************
+//FINDING THE MINMUM VALUE IN AN ARRAY USING FUNCTIONS
+#include<stdio.h>
+#include<conio.h>
+int minarray(int a[],int len);
+int main()
+{
+	int array[]={12,6,4,2,7,23};
+	int min = 0;
+	int len = 6;
+	int i;
+	clrscr();
+	min = minarray(array,len);
+	printf("The array elements are: \n");
+	for(i=0; i < len; i++ )
+	{
+		printf("%d \t",array[i]);
+	}
+	printf("\n The min value is %d",min);
+	getch();
+	return 0;
+}
+int minarray(int a[],int len)
+{
+	int min = a[0];
+	int i;
+	for(i=0; i < len; i++)
+	{
+		if(min > a[i])
+		{
+			min = a[i];
+		}
+	}
+	return min;
+}
+
+*********************************************************************************
+//COMMAND LINE ARGUMENTS
+#include<stdio.h>
+#include<conio.h>
+int main(int argc, char *argv[])
+{
+	int i=0;
+	clrscr();
+	if (argc > 1)
+	{
+	printf("The cmd arguments are: \n");
+	for(i=0; i < argc ; i++)
+	{
+	   printf("%s \t",argv[i]);
+	}
+	}
+	else
+	printf("The list is empty");
+	getch();
+	return 0 ;
+}
+*******************************************************************************************
+//PROGRAM USING ENUM DATATYPE
+#include<stdio.h>
+#include<conio.h>
+enum day { monday=0, tuesday, wednesday , thursday = 12 , friday ,
+		  saturday=22, sunday} ;
+int main()
+{
+	clrscr();
+	printf("mon=%d",monday);
+	printf("\n tue=%d",tuesday);
+	printf("\n wed=%d",wednesday);
+	printf("\n thu=%d",thursday);
+	printf("\n fri=%d",friday);
+	printf("\n sat = %d",saturday);
+	printf("\n sun=%d",sunday);
+	getch();
+	return 0;
+
+}
+*****************************************************************************************
+//PROGRAM FOR ERROR HANDLING
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    FILE *fp;     
+    fp = fopen("Error.txt", "r");
+ 
+    printf("Value of errno: %d\n ", errno);
+    printf("The error message is : %s\n", strerror(errno));
+    perror("Message from perror");
+ 
+    return 0;
+
+}
+**********************************************************************************************
+
