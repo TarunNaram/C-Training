@@ -35,3 +35,26 @@ int main()
   return 0;
 }
 ************************************************************************
+Using Structure in C++
+
+#include <iostream.h>
+#include <conio.h>
+#include <string.h>
+struct Fruit
+{
+ char name[10];
+ char color[10];
+}first;
+
+int main()
+{
+ 
+ clrscr();
+ strcpy(first.name , "Apple");
+ strcpy(first.color,"Red");
+ cout<<"Name:"<<first.name<<endl;
+ cout<<"Color:"<<first.color<<endl;
+ getch();
+ return 0;
+}
+*******************************************************************************
